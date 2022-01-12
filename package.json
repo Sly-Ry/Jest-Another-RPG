@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Sly-Ry/jest-another-rpg#readme",
   "devDependencies": {
-    "jest": "^27.4.7"
+    "jest": "^27.4.7",
+    "jest-cli": "^27.4.7"
   }
 }
