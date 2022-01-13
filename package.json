@@ -22,6 +22,7 @@
     "universal-mock": "^2.0.0"
   },
   "dependencies": {
+    "inquirer": "^8.2.0",
     "jest-mock": "^27.4.6"
   }
 }
