@@ -1,3 +1,5 @@
+const { expect } = require('@jest/globals');
+const { exp } = require('prelude-ls');
 const Player = require('../lib/Player');
 
 test('creates a player object', () => {
@@ -29,4 +31,10 @@ test('gets inventory from player or returns false', () => {
     player.inventory = [];
 
     expect(player.getInventory()).toEqual(false);
+});
+
+test("get player's health value", () => {
+    const player = new Player('Ryan');
+
+    expect(player.getHealth()).toEqual(expect.stringContaining(player.health.toString()));
 });
