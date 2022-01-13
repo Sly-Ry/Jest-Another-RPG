@@ -1,5 +1,7 @@
 // const { expect } = require('@jest/globals');
 // const exp = require('constants');
+const { expect } = require('@jest/globals');
+const { test } = require('picomatch');
 const Player = require('../lib/Player');
 
 test('creates a player object', () => {
@@ -61,4 +63,13 @@ test("subtracts from the player's health", () => {
     player.reduceHealth(99999);
 
     expect(player.health).toBe(0);
+});
+
+// this shows how to create a new test that verifies that a player's attack value is within range
+test("gets player's attack value", () => {
+    const player = new Player('Ryan');
+    player.strength = 10;
+
+    expect(player.getAttackValue()).toBeGreaterThanOrEqual(5);
+    expect(player.getAttackValue()).toBeLessThanOrEqual(15);
 });
