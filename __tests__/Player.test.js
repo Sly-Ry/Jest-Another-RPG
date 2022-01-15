@@ -72,11 +72,11 @@ test("gets player's attack value", () => {
 });
 
 test('adds a potion to the inventory', () => {
-    const player = new Player('Ryan');
+    const player = new Player('Dave');
     const oldCount = player.inventory.length;
-
+  
     player.addPotion(new Potion());
-
+  
     expect(player.inventory.length).toBeGreaterThan(oldCount);
 });
 
