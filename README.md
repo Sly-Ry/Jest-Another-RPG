@@ -1,1 +1,1 @@
-# jest-another-rpg
+# Role Playing Game [Jest]
